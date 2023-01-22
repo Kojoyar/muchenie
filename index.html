@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Admin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search..." id="search-inp"
+                        aria-label="Поиск">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end  -->
+
+    <div class="container">
+        <!-- user start  -->
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Username</label>
+                <input type="text" class="form-control" placeholder="Enter Username" id="user-inp"
+                    aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" placeholder="Enter password" id="pass-inp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password again</label>
+                <input type="password" class="form-control" placeholder="Enter password again" id="uniqe-inp">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="text" class="form-check-input" id="admin-inp">
+                <label class="form-check-label" for="exampleCheck1">Admin</label>
+            </div>
+            <button type="submit" class="btn-inp">Add user</button>
+        </form>
+        <!-- user end  -->
+
+        <!-- add product start  -->
+        <ul class="navbar-nav me-auto mt-5 mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Add product</a>
+            </li>
+        </ul>
+
+        <input class="form-control mb-3" type="url" placeholder="IMG Url" id="url-product">
+        <input class="form-control mb-3" type="text" placeholder="Enter Product" id="title-product">
+        <input class="form-control" type="text" placeholder="Enter Price" id="price-product">
+        <button type="submit" class="btn-product mt-3 " data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add
+            user</button>
+        <button class="save-product">Save
+            user</button>
+
+
+        <!-- add product end  -->
+
+
+        <!-- block start  -->
+
+
+        <!-- block end  -->
+
+        <!-- modal start  -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">User</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column w-100 align-items-cnter">
+                        <input type="url" placeholder="Enter username" id="product-user-input"
+                            class="mb-2 w-100 form-control">
+                        <input type="text" placeholder="Enter password" id="product-pass-input"
+                            class="mb-2 w-100 form-control">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark add-product-btn">Add product</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal end  -->
+        <button class="readPost">Read Posts</button>
+        <ul id="card-content" class="mt-5"></ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
